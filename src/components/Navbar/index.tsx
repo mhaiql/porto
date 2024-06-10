@@ -1,16 +1,17 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import {
   MenuOutlined,
   CloseOutlined,
   DownloadOutlined,
 } from "@ant-design/icons";
+import cv from "../../assets/files/Muhammad Haiqal-CV.pdf";
 
 interface INavbarProps {}
 
 const Navbar: React.FunctionComponent<INavbarProps> = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const sidebarRef = useRef<HTMLDivElement>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -43,7 +44,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
     <div className="bg-[#F6F3EE] px-4 sm:px-24 fixed top-0 w-full">
       <div className="flex items-center justify-between py-4">
         <div className="hidden md:flex flex-row items-center space-x-5">
-          <Link to={""} className=" font-semibold">
+          <Link to={"/"} className=" font-semibold">
             ABOUT
           </Link>
 
@@ -56,9 +57,11 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
         </div>
         <div className="hidden md:flex gap-6">
           <div className=" bg-transparent border-blue-500 border-2 cursor-pointer hover:-translate-y-1 duration-200 py-1 px-6">
-            <p className="font-semibold text-blue-500">
-              DOWNLOAD CV <DownloadOutlined />
-            </p>
+            <a href={cv} download="CV-Muhammad Haiqal.pdf">
+              <p className="font-semibold text-blue-500">
+                DOWNLOAD CV <DownloadOutlined />
+              </p>
+            </a>
           </div>
           <div className=" bg-blue-500 cursor-pointer py-1 px-10 hover:-translate-y-1 duration-200">
             <p className="font-semibold text-white">CONTACT ME</p>
