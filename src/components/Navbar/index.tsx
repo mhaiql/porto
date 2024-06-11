@@ -41,7 +41,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
   };
 
   return (
-    <div className="bg-[#F6F3EE] px-4 sm:px-24 fixed top-0 w-full">
+    <div className="bg-[#F6F3EE] px-4 sm:px-24 fixed top-0 w-full z-50 py-3 md:py-0">
       <div className="flex items-center justify-between py-4">
         <div className="hidden md:flex flex-row items-center space-x-5">
           <Link to={"/"} className=" font-semibold">
@@ -71,7 +71,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
         <div className="md:hidden">
           <button
             onClick={toggleSidebar}
-            className="px-4 py-2 rounded text-gray-700 visible fixed right-0"
+            className="px-4 rounded text-gray-700 visible fixed right-0"
           >
             <MenuOutlined />
           </button>
