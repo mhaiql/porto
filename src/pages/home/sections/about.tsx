@@ -19,7 +19,7 @@ const About: React.FunctionComponent<IAboutProps> = () => {
           ></path>
         </svg>
       </div>
-      <div className="md:flex md:h-screen mb-40 bg-[#036147] px-12 py-16 md:px-48 md:pt-32 gap-16">
+      <div className="md:flex md:h-2/3  bg-[#036147] px-12 py-16 md:px-48 md:pt-32 gap-16">
         <div className="flex md:w-1/3 bg-white h-96 rounded-3xl overflow-hidden">
           <img
             alt="guy"

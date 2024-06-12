@@ -47,6 +47,9 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
           <Link to={"/"} className=" font-semibold">
             ABOUT
           </Link>
+          <Link to={"/"} className=" font-semibold">
+            EDUCATION
+          </Link>
 
           <Link to={"/"} className=" font-semibold">
             EXPERIENCE
