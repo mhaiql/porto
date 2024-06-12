@@ -14,6 +14,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
   // const navigate = useNavigate();
   const sidebarRef = useRef<HTMLDivElement>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleOutsideClick = (event: MouseEvent) => {
     if (
@@ -40,8 +41,27 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-[#F6F3EE] px-4 sm:px-24 fixed top-0 w-full z-50 py-3 md:py-0">
+    <div
+      className={`bg-[#F6F3EE] px-4 sm:px-24 fixed top-0 w-full z-50 py-3 md:py-0 ${
+        scrolled ? "shadow-sm duration-200" : ""
+      }`}
+    >
       <div className="flex items-center justify-between py-4">
         <div className="hidden md:flex flex-row items-center space-x-5">
           <Link to={"/"} className=" font-semibold">
