@@ -31,7 +31,7 @@ const Education: React.FunctionComponent<IEducationProps> = () => {
 
   return (
     <div>
-      <div className="px-12 pb-20 md:px-48 md:pt-32 bg-[#036147]">
+      <div className="px-12 pb-20 md:px-48 md:pt-10 bg-[#036147]">
         <div className="pb-8">
           <h1 className="text-center text-6xl font-bold text-pink-300">
             Education
