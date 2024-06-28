@@ -16,7 +16,7 @@ const tabsData = [
 
 const SkillsTab: React.FunctionComponent<ISkillsTabProps> = () => {
   return (
-    <section title="my-skill" className="lg:mt-28">
+    <section title="my-skill" className="lg:mt-8">
       <Tabs
         title="My Expertise"
         tabs={tabsData.map((tab) => ({

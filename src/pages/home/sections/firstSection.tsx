@@ -28,7 +28,7 @@ const FirstSection: React.FunctionComponent<IFirstSectionProps> = () => {
             <span className=" cursor-pointer underline">portfolio</span>, visit
             my{" "}
           </Link>
-          <Link to="https://www.linkedin.com/in/mhaiql/" target="_blankz">
+          <Link to="https://www.linkedin.com/in/mhaiql/" target="_blank">
             <span className="cursor-pointer underline">linkedin</span>
           </Link>
           , or just{" "}
