@@ -12,10 +12,18 @@ const HomePage: React.FunctionComponent<IHomePageProps> = () => {
   return (
     <DefaultLayout>
       <FirstSection />
-      <About />
-      <Skills />
-      <Education />
-      <Experience />
+      <div id="about">
+        <About />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="education">
+        <Education />
+      </div>
+      <div id="experience">
+        <Experience />
+      </div>
     </DefaultLayout>
   );
 };

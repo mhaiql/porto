@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import {
   MenuOutlined,
   CloseOutlined,
@@ -64,19 +63,39 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
     >
       <div className="flex items-center justify-between py-4">
         <div className="hidden md:flex flex-row items-center space-x-5">
-          <Link to={"/"} className=" font-semibold">
+          <ScrollLink
+            to="about"
+            smooth={true}
+            duration={500}
+            className=" font-semibold cursor-pointer"
+          >
             ABOUT
-          </Link>
-          <Link to={"/"} className=" font-semibold">
+          </ScrollLink>
+          <ScrollLink
+            to="skills"
+            smooth={true}
+            duration={500}
+            className=" font-semibold cursor-pointer"
+          >
+            SKILLS
+          </ScrollLink>
+          <ScrollLink
+            to="education"
+            smooth={true}
+            duration={500}
+            className=" font-semibold cursor-pointer"
+          >
             EDUCATION
-          </Link>
+          </ScrollLink>
 
-          <Link to={"/"} className=" font-semibold">
+          <ScrollLink
+            to="experience"
+            smooth={true}
+            duration={500}
+            className=" font-semibold cursor-pointer"
+          >
             EXPERIENCE
-          </Link>
-          <Link to={"/"} className=" font-semibold">
-            PROJECTS
-          </Link>
+          </ScrollLink>
         </div>
         <div className="hidden md:flex gap-6">
           <div className=" bg-transparent border-blue-500 border-2 cursor-pointer hover:-translate-y-1 duration-200 py-1 px-6">
@@ -112,21 +131,48 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
             <CloseOutlined />
           </button>
           <div className="mt-8  ">
-            <Link to={"/"} className="block px-3 py-4 text-xl">
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              className="block px-3 py-4 text-xl"
+            >
               ABOUT
-            </Link>
-            <Link to={"/"} className="block px-3 pt-4 pb-8 text-xl">
+            </ScrollLink>
+            <ScrollLink
+              to="experience"
+              smooth={true}
+              duration={500}
+              className="block px-3 pt-4 pb-8 text-xl"
+            >
               EXPERIENCE
-            </Link>
-            <Link to={"/"} className="block px-3 pt-4 pb-8 text-xl">
-              PROJECTS
-            </Link>
-            <Link to={"/"} className="block px-3 pt-4 pb-8 text-xl">
-              DOWNLOAD CV
-            </Link>
-            <Link to={"/"} className="block px-3 pt-4 pb-8 text-xl">
+            </ScrollLink>
+            <ScrollLink
+              to="education"
+              smooth={true}
+              duration={500}
+              className="block px-3 pt-4 pb-8 text-xl"
+            >
+              EDUCATION
+            </ScrollLink>
+            <ScrollLink
+              to={"/"}
+              smooth={true}
+              duration={500}
+              className="block px-3 pt-4 pb-8 text-xl"
+            >
+              <a href={cv} download="CV-Muhammad Haiqal.pdf">
+                <p className="font-semibold text-blue-500">DOWNLOAD CV</p>
+              </a>
+            </ScrollLink>
+            <ScrollLink
+              to={"/"}
+              smooth={true}
+              duration={500}
+              className="block px-3 pt-4 pb-8 text-xl"
+            >
               CONTACT ME
-            </Link>
+            </ScrollLink>
           </div>
         </div>
       </div>
