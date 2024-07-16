@@ -99,7 +99,7 @@ const data = [
   },
 ];
 
-const Experience: React.FunctionComponent<IExperienceProps> = (props) => {
+const Experience: React.FunctionComponent<IExperienceProps> = () => {
   return (
     <div className="bg-[#F6F3EE] h-fit w-full py-16 px-6 pb-20 md:px-48 ">
       <div className="pb-8">
@@ -109,7 +109,7 @@ const Experience: React.FunctionComponent<IExperienceProps> = (props) => {
         <List
           itemLayout="horizontal"
           dataSource={data}
-          renderItem={(item, index) => (
+          renderItem={(item) => (
             <List.Item>
               <div className="flex flex-row w-full">
                 <div className="w-1/5 flex md:justify-center">
